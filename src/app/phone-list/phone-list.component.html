@@ -1,0 +1,14 @@
+<h2> Our Phone </h2>
+
+<ul>
+    <li *ngFor="let onePhone of phones">
+      <h3> {{ onePhone.name }} </h3>
+      <p>
+        By <i>{{ onePhone.brand }}</i>
+      </p>
+      <img [src]="onePhone.image" />
+
+      <!-- <a routerLink="/phone/{{ onePhone._id }}">See Details</a> -->
+      <a [routerLink]="['/phones', onePhone._id]">See Details</a>
+    </li>
+</ul>
